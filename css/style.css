@@ -1,0 +1,29 @@
+body {
+	padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+footer {
+	margin-top: 17px;
+	padding-top: 17px;
+	border-top: 1px solid #EEE;
+	font-size: 11px;
+}
+
+.navbar-inner > .container {
+	padding: 0 !important;
+}
+
+.container {padding: 20px 0 0 0}
+.hero-unit{background: #FFF;padding: 0}
+.page-header{clear: both; }
+.carousel-inner img{height: 300px; width: 100%}
+#printBtn,#downBtn{width: 100%;margin: 10px 0 0 0; font-size: 15px !important; }
+
+btn { font-size: 14px !important; }
+
+h1 { font-size: 46px !important; }
+h2 { font-size: 24px; }
+
+.span3 {
+  width: 220px !important;
+}

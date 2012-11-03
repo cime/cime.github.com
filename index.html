@@ -5,24 +5,14 @@
     <title>Andrej Cimperšek</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Andrej Cimperšek">
-    <meta name="author" content="Andrej Cimperšek">
+    <meta name="author" content="Andrej Cimperšek, cimpersek.andrej@gmail.com">
 	<meta name="keywords" content="Andrej Cimperšek, cime, software engineer" />
 
     <!-- Le styles -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-	  
-	  footer {
-		margin-top: 17px;
-		padding-top: 17px;
-		border-top: 1px solid #EEE;
-		font-size: 11px;
-	  }
-    </style>
-    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="css/print.css" rel="stylesheet" media="print">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -39,7 +29,7 @@
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
+    <div class="noPrint navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -60,20 +50,84 @@
     </div>
 
     <div class="container">
+		<div class="span8">
+                <div class="thumbnail span3">
+                    <img src="https://sl.gravatar.com/userimage/531326/8ac01e8892fe7e114bb93f0e3d1ba3e6.png?size=220" alt="">
+                </div>
+                <div class="hero-unit span4">
+                    <h1>Andrej Cimperšek</h1>
+                    <h2>SOFTWARE ENGINEER</h2>
+                    <p>
+                        <i class="icon-map-marker"></i> Koper, Slovenia
+                    </p>
+                </div>
+                <div class="page-header">
+                </div>
 
-      <p>Please come back later.</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mauris arcu, ultricies in vestibulum in, iaculis nec enim. Quisque sapien odio, venenatis mollis mollis id, pulvinar congue sapien. 
+                </p>
+                <p>
+                    Donec laoreet faucibus odio quis sollicitudin. Sed sagittis semper ultrices. Morbi eget eros felis, vel convallis nibh. Quisque ut felis magna, at lobortis sem. 
+                </p>
+                
+                <div class="page-header">
+                    <h2>Education</h2>
+                </div>
+                <dl>
+                    <dt><i class="icon-asterisk"></i> Aenean interdum viverra sodales</dt>
+                    <dd>Phasellus id arcu magna. Sed mollis porta gravida. Cras lobortis, massa non dignissim imperdiet, nunc dolor placerat nisi, nec rhoncus arcu ipsum viverra libero.</dd>
+                    <dt><i class="icon-asterisk"></i> Donec lobortis, lectus sed</dt>
+                    <dd>Phasellus id arcu magna. Sed mollis porta gravida. Cras lobortis, massa non dignissim imperdiet, nunc dolor placerat nisi, nec rhoncus arcu ipsum viverra libero.</dd>
+                    <dt><i class="icon-asterisk"></i> Cras lobortis</dt>
+                    <dd>Vivamus eu quam dapibus magna vulputate suscipit. Sed ut auctor lectus. Aenean ut turpis ipsum, vitae egestas ante.</dd>
+                </dl>  
 
-	  <footer>
-		<p>Copyright © 2012 All Rights Reserved</p>
-    </footer>
-	  
+                <div class="page-header">
+                    <h2>Work History</h2>
+                </div> 
+                <dl>
+                    <dt><i class="icon-asterisk"></i> Aenean interdum viverra sodales</dt>
+                    <dd>Phasellus id arcu magna. Sed mollis porta gravida. Cras lobortis, massa non dignissim imperdiet, nunc dolor placerat nisi, nec rhoncus arcu ipsum viverra libero.</dd>
+                    <dt><i class="icon-asterisk"></i> Donec lobortis, lectus sed</dt>
+                    <dd>Phasellus id arcu magna. Sed mollis porta gravida. Cras lobortis, massa non dignissim imperdiet, nunc dolor placerat nisi, nec rhoncus arcu ipsum viverra libero.</dd>
+                    <dt><i class="icon-asterisk"></i> Cras lobortis</dt>
+                    <dd>Vivamus eu quam dapibus magna vulputate suscipit. Sed ut auctor lectus. Aenean ut turpis ipsum, vitae egestas ante.</dd>
+                </dl>  
+
+                <div class="page-header">
+                    <h2>Interests</h2>
+                </div> 
+                <dl>
+                    <dt><i class="icon-asterisk"></i> Aenean interdum viverra sodales</dt>
+                    <dd>Phasellus id arcu magna. Sed mollis porta gravida. Cras lobortis, massa non dignissim imperdiet, nunc dolor placerat nisi, nec rhoncus arcu ipsum viverra libero.</dd>
+                    <dt><i class="icon-asterisk"></i> Donec lobortis, lectus sed</dt>
+                    <dd>Phasellus id arcu magna. Sed mollis porta gravida. Cras lobortis, massa non dignissim imperdiet, nunc dolor placerat nisi, nec rhoncus arcu ipsum viverra libero.</dd>
+                    <dt><i class="icon-asterisk"></i> Cras lobortis</dt>
+                    <dd>Vivamus eu quam dapibus magna vulputate suscipit. Sed ut auctor lectus. Aenean ut turpis ipsum, vitae egestas ante.</dd>
+                </dl>  
+
+            </div>
+	
+	
+		<div class="span3">
+			<h2>Contact</h2>
+			<p><i class="icon-envelope"></i> cimpersek.andrej@gmail.com</p>
+
+			<a href="#" class="btn btn-large noPrint" id="printBtn" onclick="print()"><i class="icon-print"></i> Print</a>
+			<a href="cv.pdf" class="btn btn-large btn-primary noPrint" id="downBtn"><i class="icon-download"></i> Download</a>
+		</div>
     </div> <!-- /container -->
+	
+	<footer class="container">
+		<p>Copyright © 2012 All Rights Reserved</p>
+	</footer>
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
   </body>
 </html>
