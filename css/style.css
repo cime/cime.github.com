@@ -27,3 +27,7 @@ h2 { font-size: 24px; }
 .span3 {
   width: 220px !important;
 }
+
+.cvbtn {
+	padding: 5px 0;
+}

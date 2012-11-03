@@ -109,17 +109,17 @@
 	
 		<div class="span3">
 			<h2>Contact</h2>
-			<p><i class="icon-envelope"></i> cimpersek.andrej@gmail.com</p>
-			<p><i class="icon-facebook"></i> <a href="http://www.facebook.com/drcime" target="_blank">Facebook</a></p>
-			<p><i class="icon-twitter"></i> <a href="http://twitter.com/cime" target="_blank">Twitter</a></p>
-			<p><i class="icon-google-plus"></i> <a href="https://plus.google.com/115531750317879477363" target="_blank">Google+</a></p>
+			<p><i class="icon-envelope"></i> Email: <a href="mailto:cimpersek.andrej@gmail.com">Andrej Cimperšek</a></p>
+			<p><i class="icon-facebook"></i> Facebook: <a href="http://www.facebook.com/drcime" target="_blank">Andrej Cimperšek</a></p>
+			<p><i class="icon-twitter"></i> Twitter: <a href="http://twitter.com/cime" target="_blank">@cime</a></p>
+			<!--<p><i class="icon-google-plus"></i> <a href="https://plus.google.com/115531750317879477363" target="_blank">Google+</a></p>-->
 
-			<a href="#" class="btn btn-large noPrint" id="printBtn" onclick="print()"><i class="icon-print"></i> Print</a>
-			<a href="cv.pdf" class="btn btn-large btn-primary noPrint" id="downBtn"><i class="icon-download"></i> Download</a>
+			<a href="#" class="btn btn-large cvbtn noPrint" id="printBtn"><i class="icon-print"></i> Print</a>
+			<a href="cv.pdf" class="btn btn-large btn-primary cvbtn noPrint" id="downBtn"><i class="icon-download"></i> Download</a>
 		</div>
     </div> <!-- /container -->
 	
-	<footer class="container">
+	<footer class="container noPrint">
 		<p>Copyright © 2012 All Rights Reserved</p>
 	</footer>
 
@@ -128,6 +128,15 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	
+	<script>
+		$(function(){
+			$('#printBtn').click(function(e){
+				e.preventDefault();
+				print();
+			});
+		});
+	</script>
 
   </body>
 </html>
