@@ -4,10 +4,10 @@ $(function(){
 		print();
 	});
 	
-	$('ul.nav li').click(function(e){
+	$('ul#main-nav li').click(function(e){
 		e.preventDefault();
 		
-		$('ul.nav li').removeClass('active');
+		$('ul#main-nav li').removeClass('active');
 		$('div.container > div.page').hide();
 		
 		$($('a', this).attr('href')).show();
