@@ -42,6 +42,7 @@ li.list-group-item:focus {
 
 .thumbnail {
   padding: 6px;
+  margin-right: 6px;
 }
 
 span.hidden-sm, span.hidden-md, span.hidden-lg {
