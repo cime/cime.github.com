@@ -41,6 +41,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav" id="main-nav">
             <li class="active"><a href="#about"><i class="fa fa-user"></i> About</a></li>
+			<li><a href="#blog"><i class="fa fa-pencil"></i> Blog</a></li>
 			<li><a href="#projects"><i class="fa fa-list"></i> Projects</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -56,11 +57,11 @@
 
     <div class="container">
 		<div id="about" class="page">
-			<div class="col-lg-9">
-				<div class="col-lg-4 noPrint">
+			<div class="col-sm-9 col-md-9 col-lg-9">
+				<div class="col-sm-4 col-md-4 col-lg-4 noPrint">
 					<img class="thumbnail" src="img/8ac01e8892fe7e114bb93f0e3d1ba3e6.png" alt="">
 				</div>
-				<div class="jumbotron col-lg-8">
+				<div class="jumbotron col-sm-8 col-md-8 col-lg-8">
 					<h1>Andrej Cimperšek</h1>
 					<h2>SOFTWARE ENGINEER</h2>
 					<p>
@@ -132,7 +133,7 @@
 
 			</div>
 			
-			<div class="col-lg-3">
+			<div class="col-sm-3 col-md-3 col-lg-3">
 				<h2>Contact</h2>
 				<p><i class="fa fa-envelope"></i> Email: <a href="mailto:cimpersek.andrej@gmail.com">Andrej Cimperšek</a></p>
 				<p><i class="fa fa-google-plus-square"></i> Google+: <a href="https://plus.google.com/+AndrejCimpersek/" target="_blank">Andrej Cimperšek</a></p>
@@ -144,10 +145,26 @@
 				<a href="cv.pdf" class="btn btn-large btn-primary cvbtn noPrint" id="downBtn"><i class="fa fa-download"></i> Download</a>
 			</div>
 		</div>
+		
+		<div id="blog" class="col-sm-9 col-md-9 col-lg-12 page" style="display: none;">
+			<ul class="nav nav-pills nav-stacked col-sm-3 col-md-3 col-lg-3">
+			  <li class="active"><a href="#">Post 1</a></li>
+			  <li><a href="#">Post 2</a></li>
+			  <li><a href="#">Post 3</a></li>
+			</ul>
+			
+			<div class="col-sm-9 col-md-9 col-lg-9">
+				<h2>Post 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac augue suscipit, volutpat leo non, tempor augue. Nam facilisis, ante eu faucibus porttitor, ipsum libero gravida mauris, eu dictum lectus erat ac odio. Aenean rutrum, sapien sit amet vulputate dapibus, leo lacus commodo sem, in blandit orci purus ac tellus. Cras scelerisque mi sit amet commodo pulvinar. Quisque vel diam turpis. Quisque at eros ultricies, convallis orci lacinia, adipiscing ante. Ut velit purus, viverra sit amet vehicula non, luctus a risus.</p>
+				<p>Curabitur tincidunt interdum sollicitudin. Suspendisse pulvinar porta consequat. Etiam convallis, felis ut ullamcorper mattis, sapien erat cursus nisl, at tempus eros ante sed odio. Proin pulvinar, felis ut iaculis iaculis, sapien tellus facilisis lorem, eu sagittis nunc diam sit amet mi. Morbi sit amet suscipit libero. Morbi ornare suscipit est ac tincidunt. Nulla interdum scelerisque convallis.</p>
+				<p>Praesent gravida, nisl in hendrerit elementum, ante mauris ultrices arcu, a adipiscing turpis diam a nulla. Mauris nec neque et augue fringilla dictum. Morbi dapibus purus non metus rhoncus, et viverra felis interdum. Quisque dignissim elementum congue. Mauris feugiat hendrerit erat, ac tempus lacus fermentum quis. Aenean pharetra turpis sit amet nulla venenatis cursus. Vestibulum in mollis arcu. Suspendisse eu mi eu elit condimentum ornare quis lacinia lectus. Suspendisse potenti. Suspendisse bibendum augue eget dolor tempor facilisis. Cras consequat dolor eget lacus cursus auctor. Ut mattis nisi sed tortor bibendum vehicula. Donec eget adipiscing lorem.</p>
+				<p>Sed justo ipsum, condimentum sed semper id, consequat fringilla est. Morbi consectetur, mauris vitae tempor euismod, lectus nibh suscipit urna, vitae consequat leo elit sit amet massa. Aenean eu felis non est mattis placerat a facilisis sem. Nulla pharetra libero et interdum lobortis. Aenean imperdiet luctus porta. Donec bibendum nulla a justo vestibulum posuere. Donec tempus diam non augue tristique, a placerat massa iaculis.</p>
+			</div>
+		</div>
 	
-		<div id="projects" class="col-lg-12 page" style="display: none;">
+		<div id="projects" class="col-sm-12 col-md-12 col-lg-12 page" style="display: none;">
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-sm-6 col-md-6 col-lg-6">
 					<h2>TicTacToe <small>(<a href="https://play.google.com/store/apps/details?id=net.specialec.tictactoe">Google Play</a>)</small></h2>
 					<img class="thumbnail" style="float: left; max-height: 190px;" src="https://lh4.ggpht.com/g0rwabrEvheLyK9CEuyk57k5yDcYt5u1b3NHFtBiqtDvV_sFCZvEv_v_LlNRZFwQRxKq=h310-rw" alt="Screenshot" />
 					<p>Tic-tac-toe (or Noughts and crosses, Xs and Os) is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three respective marks in a horizontal, vertical, or diagonal row wins the game.</p>
@@ -160,7 +177,7 @@
 					</ul>
 				</div>
 				
-				<div class="col-lg-6">
+				<div class="col-sm-6 col-md-6 col-lg-6">
 					<h2>Android Device ID <small>(<a href="https://play.google.com/store/apps/details?id=net.specialec.tictactoe">Google Play</a>)</small></h2>
 					<img class="thumbnail" style="float: left; max-height: 190px;" src="https://lh4.ggpht.com/0oU3EOzCnO8sEOOrGNL_mbAUWToZWEN9X_gaOGyN85_aWNSTIl5vHsEbfKFGpphvpQ=h310-rw" alt="Screenshot" />
 					<p>Android Device ID shows you your Android device ID. You can share it via sms, mail etc.</p>
@@ -168,7 +185,7 @@
 			</div>
 			
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="col-sm-6 col-md-6 col-lg-6">
 					<div class="page-header">
 						<h2><i class="fa fa-github"></i> GitHub</h2>
 					</div> 

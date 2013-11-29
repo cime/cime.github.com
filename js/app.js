@@ -29,6 +29,15 @@ $(function(){
 		$this.addClass('active');
 	});
 	
+	$('#blog > ul.nav li a').click(function(e){
+		e.preventDefault();
+	
+		$('#blog > ul.nav li').removeClass('active');
+		$(this).parent().addClass('active');
+		
+		$('#blog h2').text($(this).text());
+	});
+	
 	var github = new Repositories();
 
 	github.fetch().done(function(e){
