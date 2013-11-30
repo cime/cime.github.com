@@ -25,6 +25,8 @@ Router = Backbone.Router.extend({
 		$('#blog h2').text('Post ' + post);
 	},
 	any: function(page){
+		page = page || 'about';
+	
 		var $this = $('ul#main-nav li a[href="#' + page + '"]');
 		
 		$('ul#main-nav li').removeClass('active');
