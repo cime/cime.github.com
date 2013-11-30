@@ -11,31 +11,44 @@ Repositories = Backbone.Collection.extend({
 	}
 });
 
+Router = Backbone.Router.extend({
+	routes: {
+		'blog/:post': 'blog',
+		'*any': 'any'
+	},
+	blog: function(post){
+		this.any('blog');
+		
+		$('#blog > ul.nav li').removeClass('active');
+		$('#blog > ul.nav li a[href="#blog/' + post +'"]').parent().addClass('active');
+		
+		$('#blog h2').text('Post ' + post);
+	},
+	any: function(page){
+		var $this = $('ul#main-nav li a[href="#' + page + '"]');
+		
+		$('ul#main-nav li').removeClass('active');
+		$('div.container > div.page').hide();
+		
+		$('#' + page).show();
+		$this.parent().addClass('active');
+	}
+});
+
+router = new Router();
+
+Backbone.history.start();
+
 $(function(){
 	$('#printBtn').click(function(e){
 		e.preventDefault();
 		print();
 	});
 	
-	$('ul#main-nav li').click(function(e){
+	$('ul#main-nav li a, #blog > ul.nav li a').click(function(e){
 		e.preventDefault();
 		
-		var $this = $(this);
-		
-		$('ul#main-nav li').removeClass('active');
-		$('div.container > div.page').hide();
-		
-		$($('a', $this).attr('href')).show();
-		$this.addClass('active');
-	});
-	
-	$('#blog > ul.nav li a').click(function(e){
-		e.preventDefault();
-	
-		$('#blog > ul.nav li').removeClass('active');
-		$(this).parent().addClass('active');
-		
-		$('#blog h2').text($(this).text());
+		router.navigate($(this).attr('href'), {trigger: true});
 	});
 	
 	var github = new Repositories();
