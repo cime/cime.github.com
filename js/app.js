@@ -1,19 +1,62 @@
-Repository = Backbone.Model.extend({
+App = {
+	View: {},
+	Model: {},
+	Collection: {},
+	context: {}
+};
+
+App.Model.Repository = Backbone.Model.extend({
 
 });
 
-Repositories = Backbone.Collection.extend({
-	model: Repository,
-	url: 'https://api.github.com/users/cime/repos',
+App.Collection.Repositories = Backbone.Collection.extend({
+	model: App.Model.Repository,
+	url: 'https://api.github.com/users/cime/repos'
+});
+
+App.View.Repository = Backbone.View.extend({
+	tagName: 'li',
+	className: 'list-group-item',
+	template: _.template($('#repo-template').html()),
 	
-	initialize: function(){
+	initialize: function(options){
+		this.model = options.model;
+	},
+	
+	render: function(){
+		this.$el.empty();
 		
+		this.$el.html(this.template(this.model));
+	
+		return this;
 	}
 });
 
-Router = Backbone.Router.extend({
+App.View.Repositories = Backbone.View.extend({
+	el: '#github',
+	initialize: function(options){
+		this.collection = options.collection;
+	},
+	render: function(){
+		var self = this;
+		this.$el.empty();
+		
+		_.each(this.collection, function(m){
+			if(!!!m.fork){
+				self.$el.append(new App.View.Repository({ model: m }).render().el);
+			}
+		});
+	
+		return this;
+	}
+});
+
+App.context.github = new App.Collection.Repositories();
+
+App.Router = Backbone.Router.extend({
 	routes: {
 		'blog/:post': 'blog',
+		'projects': 'projects',
 		'*any': 'any'
 	},
 	blog: function(post){
@@ -23,6 +66,13 @@ Router = Backbone.Router.extend({
 		$('#blog > ul.nav li a[href="#blog/' + post +'"]').parent().addClass('active');
 		
 		$('#blog h2').text('Post ' + post);
+	},
+	projects: function(page){
+		this.any('projects');
+		
+		App.context.github.fetch().done(function(e){
+			new App.View.Repositories({ collection: e }).render();
+		});
 	},
 	any: function(page){
 		page = page || 'about';
@@ -37,7 +87,7 @@ Router = Backbone.Router.extend({
 	}
 });
 
-router = new Router();
+App.router = new App.Router();
 
 Backbone.history.start();
 
@@ -50,23 +100,6 @@ $(function(){
 	$('ul#main-nav li a, #blog > ul.nav li a').click(function(e){
 		e.preventDefault();
 		
-		router.navigate($(this).attr('href'), {trigger: true});
-	});
-	
-	var github = new Repositories();
-
-	github.fetch().done(function(e){
-		_.each(e, function(m){
-			console.dir(m);
-			if(!!!m.fork){
-				var project = $('<li class="list-group-item">' +
-					'<h4 class="list-group-item-heading">' + m.name + ' <small>(<a href="' + m.html_url + '">' + m.html_url + '</a>)</small></h4>' +
-					'<p class="list-group-item-text">' + m.description + '</p>' +
-					'<p class="list-group-item-text"><small>Language: <strong>' + m.language + '</strong></small></p>' +
-					'<small><i class="fa fa-git"></i>' + m.git_url + '</small>' +
-				'</li>')
-				$('#github').append(project);
-			}
-		});
+		App.router.navigate($(this).attr('href'), {trigger: true});
 	});
 });
