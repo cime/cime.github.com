@@ -26,181 +26,44 @@
     <link rel="shortcut icon" href="/favicon.ico">
   </head>
 
-  <body>
-
-	<!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <span class="navbar-brand">Andrej Cimperšek</span>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav" id="main-nav">
-            <li class="active"><a href="#about"><i class="fa fa-user"></i> About</a></li>
-			<li><a href="#blog"><i class="fa fa-pencil"></i> Blog</a></li>
-			<li><a href="#projects"><i class="fa fa-list"></i> Projects</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="mailto:cimpersek.andrej@gmail.com" title="Email"><i class="fa fa-envelope"></i> <span class="hidden-sm hidden-md hidden-lg"> Email</span></a></li>
-			<li><a href="https://plus.google.com/+AndrejCimpersek/" title="Google+"><i class="fa fa-google-plus-square"></i> <span class="hidden-sm hidden-md hidden-lg"> Google+</span></a></li>
-			<li><a href="http://si.linkedin.com/in/candrej" title="LinkedIn"><i class="fa fa-linkedin"></i> <span class="hidden-sm hidden-md hidden-lg"> LinkedIn</span></a></li>
-			<li><a href="http://twitter.com/cime" title="Twitter"><i class="fa fa-twitter"></i> <span class="hidden-sm hidden-md hidden-lg"> Twitter</span></a></li>
-			<li><a href="https://github.com/cime" title="GitHub"><i class="fa fa-github"></i> <span class="hidden-sm hidden-md hidden-lg"> GitHub</span></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <div class="container">
-		<div id="about" class="page">
-			<div class="col-sm-9 col-md-9 col-lg-9">
-				<div class="col-sm-4 col-md-4 col-lg-4 noPrint">
-					<img class="thumbnail" src="img/8ac01e8892fe7e114bb93f0e3d1ba3e6.png" alt="">
-				</div>
-				<div class="jumbotron col-sm-8 col-md-8 col-lg-8">
-					<h1>Andrej Cimperšek</h1>
-					<h2>SOFTWARE ENGINEER</h2>
-					<p>
-						<i class="fa fa-map-marker"></i> Koper, Slovenia
-					</p>
-				</div>
-				
-				<div style="clear: both;"></div>
-
-				<div class="page-header"></div>
-				
-				<p>
-					My name is Andrej Cimperšek. I'm a student at University of Primorska, Faculty of Mathematics, Natural Sciences and Information Technologies, currently working at Actual IT d.d. 
-				</p>
-				
-				<div class="page-header">
-					<h2>Education</h2>
-				</div>
-				<ul class="list-group">
-					<li class="list-group-item">
-						<h4 class="list-group-item-heading">UP FAMNIT, Computer science</h4>
-						<p class="list-group-item-text">University of Primorska, Faculty of Mathematics, Natural Sciences and Information Technologies, Computer Science</p>
-					</li>
-				</ul>  
-
-				<div class="page-header">
-					<h2>Work History</h2>
-				</div> 
-				<ul class="list-group">
-					<li class="list-group-item">
-						<h4 class="list-group-item-heading">Actual IT <small>(December 2010 - Present)</small></h4>
-						<p class="list-group-item-text">Software Engineer</p>
-					</li>
-					<li class="list-group-item">
-						<h4 class="list-group-item-heading">UP PINT <small>(June 2010 - September 2011)</small></h4>
-						<p class="list-group-item-text">Academic project LIDAR</p>
-					</li>
-					<li class="list-group-item">
-						<h4 class="list-group-item-heading">Infodesign <small>(April 2008 - July 2010)</small></h4>
-						<p class="list-group-item-text">Web developer</p>
-					</li>
-					<li class="list-group-item">
-						<h4 class="list-group-item-heading">Grafikarna d.o.o. <small>(January 2008 - June 2009)</small></h4>
-						<p class="list-group-item-text">Web developer</p>
-					</li>
-					<li class="list-group-item">
-						<h4 class="list-group-item-heading">UP, Faculty of educational sciences <small>(May 2007 - November 2007)</small></h4>
-						<p class="list-group-item-text">MVO, e-learning for Slovenian Ministry of defence</p>
-						<p class="list-group-item-text">Google Maps integration for ISMO - Information System about the Marine Environment for Port of Koper</p>
-					</li>
-				</ul>  
-
-				<div class="page-header">
-					<h2>Skills & Expertise</h2>
-				</div> 
-				<ul class="list-group">
-					<li class="list-group-item">C#</li>
-					<li class="list-group-item">Java</li>
-					<li class="list-group-item">Python</li>
-					<li class="list-group-item">PHP</li>
-					<li class="list-group-item">SQL (SQL Server, MySQL, PostgreSQL)</li>
-					<li class="list-group-item">NoSQL (MongoDB, Redis)</li>
-					<li class="list-group-item">ASP.NET (Web Forms, MVC, Web API)</li>
-					<li class="list-group-item">SharePoint</li>
-					<li class="list-group-item">WPF, Silverlight, MVVM</li>
-					<li class="list-group-item">Integration, Data Migration</li>
-					<li class="list-group-item">JavaScript, CSS, HTML</li>
-				</ul>  
-
+  <body ng-app="app">
+	<div ng-controller="MainCtrl">
+	  
+		<!-- Static navbar -->
+		<nav class="navbar navbar-default navbar-static-top" role="navigation" ng-init="page = 'home'">
+		  <div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <span class="navbar-brand">Andrej Cimperšek</span>
 			</div>
-			
-			<div class="col-sm-3 col-md-3 col-lg-3">
-				<!--<h2>Contact</h2>-->
-				<p><i class="fa fa-envelope"></i> Email: <a href="mailto:cimpersek.andrej@gmail.com">Andrej Cimperšek</a></p>
-				<p><i class="fa fa-google-plus-square"></i> Google+: <a href="https://plus.google.com/+AndrejCimpersek/" target="_blank">Andrej Cimperšek</a></p>
-				<p><i class="fa fa-linkedin"></i> Linkedin: <a href="http://si.linkedin.com/in/candrej" target="_blank">Andrej Cimperšek</a></p>
-				<p><i class="fa fa-twitter"></i> Twitter: <a href="http://twitter.com/cime" target="_blank">@cime</a></p>
-				<p><i class="fa fa-github"></i> Github: <a href="http://github.com/cime" target="_blank">@cime</a></p>
+			<div class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav" id="main-nav">
+				<li><a href="#!/about" active-link active-link-parent><i class="fa fa-user"></i> About</a></li>
+				<li><a href="#!/blog" active-link active-link-parent><i class="fa fa-pencil"></i> Blog</a></li>
+				<li><a href="#!/projects" active-link active-link-parent><i class="fa fa-list"></i> Projects</a></li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="mailto:cimpersek.andrej@gmail.com" title="Email"><i class="fa fa-envelope"></i> <span class="hidden-sm hidden-md hidden-lg"> Email</span></a></li>
+				<li><a href="https://plus.google.com/+AndrejCimpersek/" title="Google+"><i class="fa fa-google-plus-square"></i> <span class="hidden-sm hidden-md hidden-lg"> Google+</span></a></li>
+				<li><a href="http://si.linkedin.com/in/candrej" title="LinkedIn"><i class="fa fa-linkedin"></i> <span class="hidden-sm hidden-md hidden-lg"> LinkedIn</span></a></li>
+				<li><a href="http://twitter.com/cime" title="Twitter"><i class="fa fa-twitter"></i> <span class="hidden-sm hidden-md hidden-lg"> Twitter</span></a></li>
+				<li><a href="https://github.com/cime" title="GitHub"><i class="fa fa-github"></i> <span class="hidden-sm hidden-md hidden-lg"> GitHub</span></a></li>
+			  </ul>
+			</div><!--/.nav-collapse -->
+		  </div>
+		</nav>
 
-				<a href="#" class="btn btn-large btn-default cvbtn noPrint" id="printBtn"><i class="fa fa-print"></i> Print</a>
-				<a href="cv.pdf" class="btn btn-large btn-primary cvbtn noPrint" id="downBtn"><i class="fa fa-download"></i> Download</a>
-			</div>
-		</div>
+		<div class="container {{pageClass}}" ng-view>
+			<ng-view class="view"></ng-view>
+		</div> <!-- /container -->
+	</div>
 		
-		<div id="blog" class="col-sm-12 col-md-12 col-lg-12 page" style="display: none;">
-			<ul class="nav nav-pills nav-stacked col-sm-3 col-md-3 col-lg-3">
-			  <li class="active"><a href="#blog/1">Post 1</a></li>
-			  <li><a href="#blog/2">Post 2</a></li>
-			  <li><a href="#blog/3">Post 3</a></li>
-			</ul>
-			
-			<div class="col-sm-9 col-md-9 col-lg-9">
-				<h2>Post 1</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac augue suscipit, volutpat leo non, tempor augue. Nam facilisis, ante eu faucibus porttitor, ipsum libero gravida mauris, eu dictum lectus erat ac odio. Aenean rutrum, sapien sit amet vulputate dapibus, leo lacus commodo sem, in blandit orci purus ac tellus. Cras scelerisque mi sit amet commodo pulvinar. Quisque vel diam turpis. Quisque at eros ultricies, convallis orci lacinia, adipiscing ante. Ut velit purus, viverra sit amet vehicula non, luctus a risus.</p>
-				<p>Curabitur tincidunt interdum sollicitudin. Suspendisse pulvinar porta consequat. Etiam convallis, felis ut ullamcorper mattis, sapien erat cursus nisl, at tempus eros ante sed odio. Proin pulvinar, felis ut iaculis iaculis, sapien tellus facilisis lorem, eu sagittis nunc diam sit amet mi. Morbi sit amet suscipit libero. Morbi ornare suscipit est ac tincidunt. Nulla interdum scelerisque convallis.</p>
-				<p>Praesent gravida, nisl in hendrerit elementum, ante mauris ultrices arcu, a adipiscing turpis diam a nulla. Mauris nec neque et augue fringilla dictum. Morbi dapibus purus non metus rhoncus, et viverra felis interdum. Quisque dignissim elementum congue. Mauris feugiat hendrerit erat, ac tempus lacus fermentum quis. Aenean pharetra turpis sit amet nulla venenatis cursus. Vestibulum in mollis arcu. Suspendisse eu mi eu elit condimentum ornare quis lacinia lectus. Suspendisse potenti. Suspendisse bibendum augue eget dolor tempor facilisis. Cras consequat dolor eget lacus cursus auctor. Ut mattis nisi sed tortor bibendum vehicula. Donec eget adipiscing lorem.</p>
-				<p>Sed justo ipsum, condimentum sed semper id, consequat fringilla est. Morbi consectetur, mauris vitae tempor euismod, lectus nibh suscipit urna, vitae consequat leo elit sit amet massa. Aenean eu felis non est mattis placerat a facilisis sem. Nulla pharetra libero et interdum lobortis. Aenean imperdiet luctus porta. Donec bibendum nulla a justo vestibulum posuere. Donec tempus diam non augue tristique, a placerat massa iaculis.</p>
-			</div>
-		</div>
-	
-		<div id="projects" class="col-sm-12 col-md-12 col-lg-12 page" style="display: none;">
-			<div class="row">
-				<div class="col-sm-6 col-md-6 col-lg-6">
-					<h2>TicTacToe <small>(<a href="https://play.google.com/store/apps/details?id=net.specialec.tictactoe">Google Play</a>)</small></h2>
-					<img class="thumbnail" style="float: left; max-height: 190px;" src="https://lh4.ggpht.com/g0rwabrEvheLyK9CEuyk57k5yDcYt5u1b3NHFtBiqtDvV_sFCZvEv_v_LlNRZFwQRxKq=h310-rw" alt="Screenshot" />
-					<p>Tic-tac-toe (or Noughts and crosses, Xs and Os) is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three respective marks in a horizontal, vertical, or diagonal row wins the game.</p>
-					<p>
-						Features:<br/>
-						- Three Singleplayer difficulties<br/>
-						- Two Players<br/>
-						- Free
-					</p>
-					</ul>
-				</div>
-				
-				<div class="col-sm-6 col-md-6 col-lg-6">
-					<h2>Android Device ID <small>(<a href="https://play.google.com/store/apps/details?id=net.specialec.tictactoe">Google Play</a>)</small></h2>
-					<img class="thumbnail" style="float: left; max-height: 190px;" src="https://lh4.ggpht.com/0oU3EOzCnO8sEOOrGNL_mbAUWToZWEN9X_gaOGyN85_aWNSTIl5vHsEbfKFGpphvpQ=h310-rw" alt="Screenshot" />
-					<p>Android Device ID shows you your Android device ID. You can share it via sms, mail etc.</p>
-				</div>
-			</div>
-			
-			<div class="row">
-				<div class="col-sm-12 col-md-12 col-lg-12">
-					<div class="page-header">
-						<h2><i class="fa fa-github"></i> GitHub</h2>
-					</div> 
-					
-					<ul id="github" class="list-group">
-						
-					</ul>
-				</div>
-			</div>
-		</div>
-    </div> <!-- /container -->
-	
-	<footer class="noPrint">
+	<footer class="noPrint {{pageClass}}">
 		<div class="container">
 			<p>Copyright © 2012-2014 All Rights Reserved</p>
 		</div>
@@ -216,10 +79,10 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.min.js"></script>
-	<script src="js/underscore-min.js"></script>
-	<script src="js/backbone-min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+	<script src="js/angular-animate.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
 	<script src="js/app.js"></script>
 
   </body>

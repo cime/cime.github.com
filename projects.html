@@ -1,0 +1,39 @@
+<div class="col-sm-12 col-md-12 col-lg-12 page">
+	<div class="row">
+		<div class="col-sm-6 col-md-6 col-lg-6">
+			<h2>TicTacToe <small>(<a href="https://play.google.com/store/apps/details?id=net.specialec.tictactoe">Google Play</a>)</small></h2>
+			<img class="thumbnail" style="float: left; max-height: 190px;" src="https://lh4.ggpht.com/g0rwabrEvheLyK9CEuyk57k5yDcYt5u1b3NHFtBiqtDvV_sFCZvEv_v_LlNRZFwQRxKq=h310-rw" alt="Screenshot" />
+			<p>Tic-tac-toe (or Noughts and crosses, Xs and Os) is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three respective marks in a horizontal, vertical, or diagonal row wins the game.</p>
+			<p>
+				Features:<br/>
+				- Three Singleplayer difficulties<br/>
+				- Two Players<br/>
+				- Free
+			</p>
+			</ul>
+		</div>
+		
+		<div class="col-sm-6 col-md-6 col-lg-6">
+			<h2>Android Device ID <small>(<a href="https://play.google.com/store/apps/details?id=net.specialec.tictactoe">Google Play</a>)</small></h2>
+			<img class="thumbnail" style="float: left; max-height: 190px;" src="https://lh4.ggpht.com/0oU3EOzCnO8sEOOrGNL_mbAUWToZWEN9X_gaOGyN85_aWNSTIl5vHsEbfKFGpphvpQ=h310-rw" alt="Screenshot" />
+			<p>Android Device ID shows you your Android device ID. You can share it via sms, mail etc.</p>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="page-header">
+				<h2><i class="fa fa-github"></i> GitHub</h2>
+			</div> 
+			
+			<ul id="github" class="list-group">
+				<li class="list-group-item" ng-repeat="repository in repositories | filter: {fork: false}">
+					<h4 class="list-group-item-heading">{{repository.name}}<small>(<a href="<%= html_url %>">'{{repository.html_url}}</a>)</small></h4>
+					<p class="list-group-item-text">{{repository.description}}</p>
+					<p class="list-group-item-text"><small>Language: <strong>{{repository.language}}</strong></small></p>
+					<small><i class="fa fa-git"></i>{{repository.git_url}}</small>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
