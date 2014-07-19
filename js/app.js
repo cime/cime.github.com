@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngResource'])
+var app = angular.module('app', ['ngRoute', 'ngAnimate', 'ngResource', 'angular-loading-bar'])
 
 app.config(function ($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(false).hashPrefix('!');
