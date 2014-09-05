@@ -88,17 +88,3 @@ span.hidden-sm, span.hidden-md, span.hidden-lg {
     opacity: 0;
   }
 }
-
-
-.view-animate.ng-enter {
-	-webkit-animation-duration: 1.0s;
-    animation-duration: 1.0s;
-	-webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-}
-
-.view-animate.ng-leave {
-	display: none;
-}
