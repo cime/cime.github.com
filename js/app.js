@@ -88,6 +88,10 @@ app.controller('ProjectsCtrl', function($rootScope, $resource){
 	if(!$rootScope.repositories){
 		var repositories = $resource('https://api.github.com/users/cime/repos');
 		repositories.query().$promise.then(function(repos){
+			repos = _.filter(repos, function(repo){
+				return repo.name != 'java-universal-tween-engine' && repo.name != 'box2d-fluent-for-libgdx';
+			});
+			
 			$rootScope.repositories = repos;
 		});
 	}

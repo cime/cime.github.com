@@ -34,7 +34,7 @@
 			
 			<ul id="github" class="list-group">
 				<li class="list-group-item" ng-repeat="repository in repositories | filter: {fork: false}">
-					<h4 class="list-group-item-heading">{{repository.name}}<small>(<a href="<%= html_url %>">'{{repository.html_url}}</a>)</small></h4>
+					<h4 class="list-group-item-heading">{{repository.name}}<small>(<a href="{{repository.html_url}}">{{repository.html_url}}</a>)</small></h4>
 					<p class="list-group-item-text">{{repository.description}}</p>
 					<p class="list-group-item-text"><small>Language: <strong>{{repository.language}}</strong></small></p>
 					<small><i class="fa fa-git"></i>{{repository.git_url}}</small>
