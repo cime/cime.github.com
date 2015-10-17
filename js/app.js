@@ -17,6 +17,10 @@ app.config(function ($routeProvider, $locationProvider) {
     });
 });
 
+app.run(function($window, $rootScope){
+	$rootScope.year = (new Date()).getFullYear();
+});
+
 app.directive('activeLink', ['$location', function($location) {
     return {
         restrict: 'A',

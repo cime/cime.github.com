@@ -16,6 +16,10 @@ footer p {
 	margin: 10px 0;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 .jumbotron{background: #FFF; padding: 0; }
 #printBtn,#downBtn{width: 100%;margin: 10px 0 0 0; font-size: 15px !important; }
 
