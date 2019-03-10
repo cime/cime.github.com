@@ -1,4 +1,0 @@
-andrejcimpersek.com
-===================
-
-Personal website.
