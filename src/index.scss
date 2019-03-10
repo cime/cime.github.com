@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 72px;
+}
+
+nav.navbar {
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+}
+
+.thumbnail {
+    padding: 6px;
+    margin-right: 6px;
+}
+
+.thumbnail, .img-thumbnail {
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+    box-shadow: 0 1px 2px rgba(0,0,0,.075);
+}
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.jumbotron {
+    background-color: #fff;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    margin-bottom: 0;
+}
+
+.thumbnail {
+    padding: 6px;
+    margin-right: 6px;
+}
